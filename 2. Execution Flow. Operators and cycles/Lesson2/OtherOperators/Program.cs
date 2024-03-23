@@ -1,2 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// ПРИМЕР
+// Оператор ?: служит синонимом для конструкции if-else
+var number = 42;
+var message = number % 2 == 0
+    ? $"{number} - чётное"
+    : $"{number} - нечётное";
+
+Console.WriteLine(message);
+
+// ПРИМЕР
+// Оператор ?? присвоит значение правого операнда, если левый равен null
+string? text = null;
+message = text ?? "Какой-то текст";
+
+// НА БУДУЩЕЕ - специальное значение null позволяет отразить ситуацию "отсутствия значения" -
+// например, если ссылочная переменная не была проинициализирована значением, её значение равно null.
+// Другой пример - отсутствие данных в колонке таблицы базы данных.
+
+Console.WriteLine(message);
