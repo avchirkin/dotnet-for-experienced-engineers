@@ -5,6 +5,16 @@ if (args.Length == 0)
     Console.WriteLine("Не передано параметров при запуске приложения");
 }
 
+if (args.Length > 0 && args[0] == "--path")
+{
+    Console.WriteLine("Набор параметров корректный");
+}
+
+if (args.Length < 1 || args[0] != "--path")
+{
+    Console.WriteLine("Набор параметров некорректный");
+}
+
 // Запрашиваем ввод значения пользователем через консоль
 Console.WriteLine("Please, enter a number");
 var input = Console.ReadLine();
