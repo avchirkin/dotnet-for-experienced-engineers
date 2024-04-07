@@ -51,7 +51,16 @@ switch(dayNumber)
         throw new InvalidOperationException($"Введите номер дня от 1 до 7!");
 }
 
-// ЗАДАНИЕ - написать консольное приложение, определяющее чётность/нечётность введённого числа.
+// ЗАДАНИЕ - написать консольное приложение, решающее классическую задачу FizzBuzz, используя оператор switch
+
+var message = dayNumber switch
+{
+    > 0 and <= 5 => "Рабочий",
+    > 5 and <= 7 => "Выходной",
+    _ => throw new InvalidOperationException("Некорректный индекс дня"),
+};
+
+Console.WriteLine(message);
 
 // НА БУДУЩЕЕ - вся мощь оператора switch раскрывается с помощью механизма pattern matching,
 // который мы рассмотрим позже.
