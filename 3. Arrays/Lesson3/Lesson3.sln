@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaggedArrays", "JaggedArray
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraySegment", "ArraySegment\ArraySegment.csproj", "{A504ED6B-D3E2-4881-AD39-30F82285A93B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicArrayExample", "DynamicArrayExample\DynamicArrayExample.csproj", "{4176D79C-4111-48A7-98A3-97F39A85D6F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{A504ED6B-D3E2-4881-AD39-30F82285A93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A504ED6B-D3E2-4881-AD39-30F82285A93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A504ED6B-D3E2-4881-AD39-30F82285A93B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4176D79C-4111-48A7-98A3-97F39A85D6F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4176D79C-4111-48A7-98A3-97F39A85D6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4176D79C-4111-48A7-98A3-97F39A85D6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4176D79C-4111-48A7-98A3-97F39A85D6F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
