@@ -5,7 +5,7 @@ using ExplicitAndImplicitCasting;
 // Преобразования ссылочных типов
 
 object obj = new Student("Andrey"); // Implicit cast - приведение к базовому типу
-// Student student = obj; // Ошибка! ВОПРОС - почему?
+//Student student = obj; // Ошибка! ВОПРОС - почему?
 Student student = (Student)obj; // Explicit cast - явное приведение, в obj действительно лежит Student
 Student? otherStudent = obj as Student; // Приведение с помощью оператора as
 
@@ -15,7 +15,7 @@ var str = "Some string";
 var explicitlyStringableStudent = (ExplicitlyStringableStudent)str; // Ок - переопределен оператор явного преобразования
 str = (string)explicitlyStringableStudent; // Ок - переопределен оператор явного преобразования
 
-var implicitlyStringableStudent = str; // Ок - переопределен оператор неявного преобразования
+ImplicitlyStringableStudent implicitlyStringableStudent = str; // Ок - переопределен оператор неявного преобразования
 str = implicitlyStringableStudent; // Ок - переопределен оператор неявного преобразования
 
 

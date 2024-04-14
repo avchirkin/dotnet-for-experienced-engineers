@@ -30,8 +30,9 @@ Console.WriteLine(object.ReferenceEquals(obj, sameObj)); // true
 Console.ReadLine();
 
 var otherObj = new object();
-Console.WriteLine(obj.Equals(otherObj)); // ВОПРОС - что будет в консоли?
-Console.WriteLine(obj == otherObj); // ВОПРОС - что будет в консоли?
-Console.WriteLine(object.ReferenceEquals(obj, otherObj)); // ВОПРОС - что будет в консоли?
+var anotherObj = new object();
+Console.WriteLine(anotherObj.Equals(otherObj)); // ВОПРОС - что будет в консоли?
+Console.WriteLine(anotherObj == otherObj); // ВОПРОС - что будет в консоли?
+Console.WriteLine(object.ReferenceEquals(anotherObj, otherObj)); // ВОПРОС - что будет в консоли?
 
 Console.ReadLine();
