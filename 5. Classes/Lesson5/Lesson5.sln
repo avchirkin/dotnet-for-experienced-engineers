@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassExamples", "ClassExamples\ClassExamples.csproj", "{1252E192-2CE9-403B-88AB-0E5022CDC926}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2925956D-4B3E-4DD5-BD35-470C830E353C}"
+	ProjectSection(SolutionItems) = preProject
+		Plan.md = Plan.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticClassesExamples", "StaticClassesExamples\StaticClassesExamples.csproj", "{9717F64E-75C8-4BF4-96DF-6BC036010190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{ABCBD99D-96F2-45A0-8DAD-2ABEB83858F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InOutRefKeywords", "InOutRefKeywords\InOutRefKeywords.csproj", "{6350FC71-43BC-4F46-9A8C-E69CF744FD4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedClassesAndMethods", "PrivateAndNestedClasses\NestedClassesAndMethods.csproj", "{23625EC9-CAC7-4549-956A-67DBE5DF68D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1252E192-2CE9-403B-88AB-0E5022CDC926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1252E192-2CE9-403B-88AB-0E5022CDC926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1252E192-2CE9-403B-88AB-0E5022CDC926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1252E192-2CE9-403B-88AB-0E5022CDC926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9717F64E-75C8-4BF4-96DF-6BC036010190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9717F64E-75C8-4BF4-96DF-6BC036010190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9717F64E-75C8-4BF4-96DF-6BC036010190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9717F64E-75C8-4BF4-96DF-6BC036010190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABCBD99D-96F2-45A0-8DAD-2ABEB83858F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCBD99D-96F2-45A0-8DAD-2ABEB83858F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCBD99D-96F2-45A0-8DAD-2ABEB83858F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCBD99D-96F2-45A0-8DAD-2ABEB83858F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6350FC71-43BC-4F46-9A8C-E69CF744FD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6350FC71-43BC-4F46-9A8C-E69CF744FD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6350FC71-43BC-4F46-9A8C-E69CF744FD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6350FC71-43BC-4F46-9A8C-E69CF744FD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23625EC9-CAC7-4549-956A-67DBE5DF68D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23625EC9-CAC7-4549-956A-67DBE5DF68D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23625EC9-CAC7-4549-956A-67DBE5DF68D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23625EC9-CAC7-4549-956A-67DBE5DF68D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31DC75D7-B026-47FE-B22C-6D9CC8001AC6}
+	EndGlobalSection
+EndGlobal
