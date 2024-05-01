@@ -12,7 +12,7 @@ Console.WriteLine(battleMaster.ArmorThickness); // 120
 IMovable movableBattleMaster = new BattleMasterTank();
 movableBattleMaster.Move(42); // Moving to waypoint 42...
 Console.WriteLine(movableBattleMaster.MaxSpeed); // 70
-// Console.WriteLine(movable.ArmorThickness); // Ошибка! В интерфейсе IMovable нет такого свойства
+// Console.WriteLine(movableBattleMaster.ArmorThickness); // Ошибка! В интерфейсе IMovable нет такого свойства
 
 // BattleMasterTank anotherBattleMaster = movableBattleMaster; // Невозможно преобразовать из интерфейса в класс
 BattleMasterTank anotherBattleMaster = (BattleMasterTank)movableBattleMaster; // А вот так - можно
