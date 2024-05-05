@@ -17,4 +17,10 @@ public class DuplicatesSearcherTests
     {
         _ = _spanBasedSearcher.SearchDuplicatesNumber(TestString, _searchChars);
     }
+
+    [Benchmark]
+    public void SpanBasedByCountSearch()
+    {
+        _ = _spanBasedSearcher.SearchDuplicatesNumberByCount(TestString, _searchChars);
+    }
 }

@@ -23,4 +23,12 @@ public class SpanBasedDuplicatesSearcher
         var tail = part[(index + 1)..];
         SearchBySpan(tail, chars, ref duplicates);
     }
+
+    public long SearchDuplicatesNumberByCount(string source, char[] chars)
+    {
+        var strSpan = new Span<char>(source.ToCharArray());
+        var segmentSpan = new Span<char>(chars);
+
+        return strSpan.Count(segmentSpan);
+    }
 }
