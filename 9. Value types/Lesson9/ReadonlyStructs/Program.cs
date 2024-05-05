@@ -21,6 +21,6 @@ SafelyUseNonReadonlyStruct(nonReadonlyFileInfo);
 
 void SafelyUseNonReadonlyStruct(in NonReadonlyFileInfo nonSecureFileInfo)
 {
-    // fileInfo.Extension = "md"; // Ошибка! Передаваемая структура не является изменяемой
+    // nonSecureFileInfo.Extension = "md"; // Ошибка! Передаваемая структура не является изменяемой
     Console.WriteLine($"{nonSecureFileInfo.Path}.{nonSecureFileInfo.Extension}, {nonSecureFileInfo.Size} bytes, updated at {nonSecureFileInfo.LastUpdatedAt}");
 }

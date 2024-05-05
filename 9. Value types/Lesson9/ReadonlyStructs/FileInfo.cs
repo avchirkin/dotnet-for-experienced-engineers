@@ -14,4 +14,6 @@ public readonly struct FileInfo
     public DateTime LastUpdatedAt { get; init; }
     
     public int Size { get; init; }
+    
+    public string[] Authors { get; init; }
 }
