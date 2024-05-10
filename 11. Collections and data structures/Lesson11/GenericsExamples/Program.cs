@@ -24,7 +24,7 @@ var names = new List<string?> {"Aleksey", "Aleksandr", null, "Vasiliy"};
 var filteredNames = names.FilterEmpty();
 foreach (var name in filteredNames)
 {
-    Console.WriteLine(name); 
+    Console.WriteLine(name);
 }
 
 var listWithDuplicates = new List<int> { 1, 3, 56, 17, 3, 24, 15, 56 };

@@ -6,7 +6,7 @@ public static class EnumerableExtensions
     {
         return source.Where(item => item != null);
     }
-    
+
     public static IEnumerable<T> GetDuplicates<T>(this IEnumerable<T> source)
     {
         var query = source.GroupBy(x => x)
