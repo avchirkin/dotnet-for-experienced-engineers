@@ -3,6 +3,16 @@
 var nomenclature = new Nomenclature();
 
 // 1. Вывести товар с самой высокой ценой
+var maxPriceRecord = nomenclature.PriceHistory
+    .Where(item => item.Value.History.Count > 0)
+    .ToDictionary(
+        kvp => kvp.Key,
+        kvp => kvp.Value.History.Max(item => item.Price))
+    .OrderByDescending(kvp => kvp.Value)
+    .FirstOrDefault();
+
+var maxPriceItem = nomenclature.Items.FirstOrDefault(item => item.Id.Equals(maxPriceRecord.Key));
+Console.WriteLine($"ID: {maxPriceItem?.Id}, Name: {maxPriceItem?.Name}, Price: {maxPriceRecord.Value}");
 
 // 2. Вывести список товаров категории "Товары для спорта" в порядке по убыванию
 

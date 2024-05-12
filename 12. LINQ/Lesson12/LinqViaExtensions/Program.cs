@@ -74,21 +74,21 @@ void FirstAndLast()
     Console.WriteLine(lastNameFromA); // Aleksey
 }
 
-// 3. Взять первые N элементов
+// 4. Взять первые N элементов
 void Take()
 {
     var firstTwo = names.Take(2);
     PrintItems(firstTwo, "firstTwo");
 }
 
-// 4. Пропустить первые N элементов
+// 5. Пропустить первые N элементов
 void Skip()
 {
     var lastOnes = names.Skip(1);
     PrintItems(lastOnes, "lastOnes");
 }
 
-// 5. Сгруппировать коллекцию
+// 6. Сгруппировать коллекцию
 void Group()
 {
     var groups = names.GroupBy(name => name.First()).ToArray();
@@ -99,7 +99,7 @@ void Group()
     }
 }
 
-// 6. Пересечение множеств
+// 7. Пересечение множеств
 void Intersect()
 {
     string[] anotherNames = ["Aleksandr", "Ivan", "Vladimir"];
@@ -107,7 +107,7 @@ void Intersect()
     PrintItems(commonItems, "commonItems");
 }
 
-// 7. Исключение элементов второго множества из первого
+// 8. Исключение элементов второго множества из первого
 void Except()
 {
     string[] anotherNames = ["Aleksandr", "Ivan", "Vladimir"];
@@ -115,7 +115,7 @@ void Except()
     PrintItems(uniqueNamesInFirstCollection, "uniqueNamesInFirstCollection");
 }
 
-// 8. Уникальные элементы
+// 9. Уникальные элементы
 void Distinct()
 {
     int[] nonUniqueNumbers = [1, 0, 0, 1, 0, 1];
@@ -123,14 +123,14 @@ void Distinct()
     PrintItems(unique, "unique");
 }
 
-// 9. Приведение к типу
+// 10. Приведение к типу
 void Cast()
 {
     var students = abstractStudents.Cast<Student>();
     PrintItems(students, "students");
 }
 
-// 10. Сортировка
+// 11. Сортировка
 void Sort()
 {
     string[] words = ["this", "is", "the", "non", "sorted", "words"];
@@ -150,7 +150,7 @@ void Sort()
     // Также есть опция сортировки по нескольким полям - для этого используйте методы ThenBy, ThenByDescending
 }
 
-// 11. Соединение множеств
+// 12. Соединение множеств
 void Join()
 {
     Grade[] grades =
