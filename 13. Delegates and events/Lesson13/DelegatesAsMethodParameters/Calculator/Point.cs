@@ -1,4 +1,4 @@
-namespace DelegatesAsMethodParameters;
+namespace DelegatesAsMethodParameters.Calculator;
 
 public readonly struct Point
 {

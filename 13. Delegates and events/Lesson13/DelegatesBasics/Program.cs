@@ -1,4 +1,7 @@
 ﻿using System.Globalization;
+using DelegatesBasics;
+
+Console.ReadLine();
 
 // Инициализация через конструктор
 PrintDelegate printerOne = new PrintDelegate(PrintDateTime);
@@ -34,7 +37,10 @@ void PrintMessage(string message)
 }
 
 // Объявление делегата
-internal delegate void PrintDelegate(string message);
+namespace DelegatesBasics
+{
+    internal delegate void PrintDelegate(string message);
+}
 
 
 
