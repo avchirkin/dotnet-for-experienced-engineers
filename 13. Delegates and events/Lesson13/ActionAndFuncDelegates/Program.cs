@@ -25,17 +25,17 @@ var currDateAsString = new Func<string>(() => DateTime.Now.ToString("f"));
 var currDateTime = currDateAsString();
 Console.WriteLine(currDateTime); // Tuesday, 14 May 2024 12:22
 
-var powFunc = new Func<int, double>(Pow);
-var powOf3 = powFunc(3);
-Console.WriteLine(powOf3); // 9
+var squareFunc = new Func<int, double>(Square);
+var square = squareFunc(3);
+Console.WriteLine(square); // 9
 
-// Функции также можно создавать через анонимные методы 
+// Функции также можно создавать через анонимные методы
 var sumFunc = (int first, int second) => (double)first + second;
 var sum = sumFunc(4, 5);
 Console.WriteLine(sum); // 9
 
 // Явное создание экземпляра функции с передачей анонимного метода в качестве параметра
-sumFunc = new Func<int, int, double>((first, second) => first + second);
+sumFunc = (first, second) => first + second;
 sum = sumFunc(10, 15);
 Console.WriteLine(sum); // 25
 
@@ -49,7 +49,7 @@ var result = formatter.Format(
     6);
 Console.WriteLine(result); // 4 + 6 = 10
 
-double Pow(int number)
+double Square(int number)
 {
     return number * number;
 }
