@@ -3,6 +3,8 @@
 var nomenclature = new Nomenclature();
 
 // 1. Вывести товар с самой высокой ценой
+
+// Вариант 1
 var maxPriceRecord = nomenclature.PriceHistory
     .Where(item => item.Value.History.Count > 0)
     .ToDictionary(
@@ -13,6 +15,29 @@ var maxPriceRecord = nomenclature.PriceHistory
 
 var maxPriceItem = nomenclature.Items.FirstOrDefault(item => item.Id.Equals(maxPriceRecord.Key));
 Console.WriteLine($"ID: {maxPriceItem?.Id}, Name: {maxPriceItem?.Name}, Price: {maxPriceRecord.Value}");
+
+// Вариант 2
+var prices = nomenclature.PriceHistory
+    .Where(prices => prices.Value.History.Count > 0)
+    .Select((prices) => new
+    {
+        ProductId = prices.Key,
+        MaxPrice = prices.Value.History.Max(item => item.Price)
+    })
+    .Join(
+        nomenclature.Items,
+        price => price.ProductId,
+        product => product.Id,
+        (price, product) => new {ProductName = product.Name, price.MaxPrice}
+    )
+    .GroupBy(priceInfo => priceInfo.MaxPrice)
+    .OrderByDescending(price => price.Key);
+
+var mostValuableGroup = prices.First();
+foreach (var items in mostValuableGroup)
+{
+    Console.WriteLine($"Product: {items.ProductName}, price: {items.MaxPrice}");
+}
 
 // 2. Вывести список товаров категории "Товары для спорта" в порядке по убыванию
 
