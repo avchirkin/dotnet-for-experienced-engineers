@@ -64,6 +64,6 @@ Console.WriteLine(result); // (8, 16)
     return (input.First * multiplier, input.Second * multiplier);
 }
 
-// Пример - алиасы для кортежей 
+// Пример - алиасы для кортежей
 
 

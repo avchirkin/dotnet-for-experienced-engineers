@@ -14,6 +14,10 @@ Console.WriteLine(instanceOne == instanceTwo); // ?
 Console.WriteLine(ReferenceEquals(instanceOne, instanceTwo)); // ?
 Console.WriteLine(instanceOne.Equals(instanceTwo)); // ?
 
+var instanceThird = new {Name = "Mikhail", Id = 42};
+Console.WriteLine(instanceThird.GetType().Name);
+Console.WriteLine(instanceOne.Equals(instanceThird)); // ?
+
 // Поддерживается конструкция with
 var instanceThree = instanceOne with { Name = "Eugene" };
 Console.WriteLine(instanceThree); // { Id = 42, Name = Eugene }
