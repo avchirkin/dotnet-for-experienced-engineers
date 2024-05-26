@@ -2,9 +2,11 @@
 
 // 1. Try-catch конструкции
 
-// TryCatchSimple("not_a_number");
+// TryCatch("not_a_number");
 // TryCatchWithExceptionType("not_a_number");
 // TryCatchWithMultipleExceptionTypes("");
+// TryCatchWithMultipleExceptionTypes("urn");
+
 /*
 try
 {
@@ -38,6 +40,7 @@ threadFour.Start();
 
 // TryWithFilters(new Customer("Petr", 16));
 // TryWithFilters(new Customer("", 25));
+// TryWithFilters(new Customer("Petr", 25));
 
 void TryCatch(string input)
 {
@@ -157,6 +160,8 @@ void TryWithFilters(Customer customer)
         {
             throw new CustomerValidationException(nameof(customer.Name));
         }
+
+        throw new CustomerValidationException("");
     }
     catch (CustomerValidationException ex) when (ex.Criteria == nameof(customer.Age))
     {
