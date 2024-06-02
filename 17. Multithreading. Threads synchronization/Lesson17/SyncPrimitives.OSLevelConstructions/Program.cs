@@ -1,5 +1,5 @@
 ﻿// 1. Mutex
-DealWithMutex();
+// DealWithMutex();
 
 // 2. Semaphore
 // DealWithSemaphore();
@@ -21,14 +21,14 @@ void DealWithMutex()
     
     Parallel.Invoke(actions);
     
-    Console.WriteLine(list.Count);    
+    Console.WriteLine(list.Count);
 }
 
 void DealWithSemaphore()
 {
     var actions = new Action[100];
     
-    var semaphore = new Semaphore(5, 5);
+    var semaphore = new Semaphore(1, 1);
     // var semaphore = new SemaphoreSlim(5, 5); // гибридная альтернатива обычному Semaphore
 
     var counter = 0;
