@@ -2,8 +2,8 @@
 
 // ConcurrentDictionary
 
-DealWithDictionary();
-// DealWithConcurrentDictionary();
+// DealWithDictionary();
+DealWithConcurrentDictionary();
 
 void DealWithDictionary()
 {
@@ -13,7 +13,7 @@ void DealWithDictionary()
     var successCounter = 0;
     Array.Fill(actions, () =>
     {
-        Thread.Sleep(100); // Имитация нагрузки
+        Thread.Sleep(300); // Имитация нагрузки
         if (dictionary.TryAdd(1, "Some text"))
         {
             Interlocked.Increment(ref successCounter);
@@ -33,7 +33,7 @@ void DealWithConcurrentDictionary()
     var successCounter = 0;
     Array.Fill(actions, () =>
     {
-        Thread.Sleep(100); // Имитация нагрузки
+        Thread.Sleep(300); // Имитация нагрузки
         if (dictionary.TryAdd(1, "Some text"))
         {
             Interlocked.Increment(ref successCounter);
