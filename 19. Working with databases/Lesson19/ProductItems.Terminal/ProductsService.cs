@@ -54,4 +54,14 @@ public class ProductsService(ProductItemsDbContext context)
 
         return query;
     }
+
+    public async Task DeleteProductItemById(Guid id)
+    {
+        var productItem = context.ProductItems.SingleOrDefault(item => item.Id == id);
+
+        if (productItem == null) return;
+        
+        context.Remove(productItem);
+        await context.SaveChangesAsync();
+    }
 }
