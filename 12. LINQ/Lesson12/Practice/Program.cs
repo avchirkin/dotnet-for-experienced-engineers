@@ -31,7 +31,7 @@ var prices = nomenclature.PriceHistory
         (price, product) => new {ProductName = product.Name, price.MaxPrice}
     )
     .GroupBy(priceInfo => priceInfo.MaxPrice)
-    .OrderByDescending(price => price.Key);
+    .OrderByDescending(price => price);
 
 var mostValuableGroup = prices.First();
 foreach (var items in mostValuableGroup)
