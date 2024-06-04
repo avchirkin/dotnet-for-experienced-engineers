@@ -7,5 +7,5 @@ public sealed record Category
     public string Name { get; init; } = default!;
         
     // Navigation property
-    public IEnumerable<ProductItem> ProductItems { get; init; } = default!;
+    public IEnumerable<ProductItem>? ProductItems { get; init; }
 }

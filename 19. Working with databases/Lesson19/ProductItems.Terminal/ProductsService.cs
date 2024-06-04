@@ -36,9 +36,9 @@ public class ProductsService(ProductItemsDbContext context)
             .Include(item => item.Category)
             .Include(item => item.Props)
             .AsNoTracking();
-        
-        // Console.WriteLine(query.ToQueryString());
 
+        // Console.WriteLine(query.ToQueryString());
+        
         return query;
     }
     

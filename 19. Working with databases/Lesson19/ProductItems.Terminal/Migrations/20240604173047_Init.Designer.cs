@@ -12,7 +12,7 @@ using ProductItems.Terminal.Models;
 namespace ProductItems.Terminal.Migrations
 {
     [DbContext(typeof(ProductItemsDbContext))]
-    [Migration("20240604083616_Init")]
+    [Migration("20240604173047_Init")]
     partial class Init
     {
         /// <inheritdoc />
