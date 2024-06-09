@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Practice;
 using Practice.Models;
-using ProductItems.Terminal;
 
 using var host = Host.CreateDefaultBuilder(args)
     .ConfigureAppConfiguration(config =>
