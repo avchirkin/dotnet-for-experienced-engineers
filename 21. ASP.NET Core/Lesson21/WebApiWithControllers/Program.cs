@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebApiWithControllers.Entities;
+using WebApiWithControllers.Middleware;
 using WebApiWithControllers.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,5 +31,7 @@ if (app.Environment.IsDevelopment())
 app.MapControllers();
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseTestRequestsHandler();
 
 app.Run();
