@@ -1,5 +1,3 @@
-using System.Net;
-
 namespace WebApiWithControllers.Middleware;
 
 public class TestRequestsHandler(RequestDelegate next)
