@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Onion.Application.Models\Onion.Application.Models.csproj" />
+      <ProjectReference Include="..\Onion.Application.Services.Abstractions\Onion.Application.Services.Abstractions.csproj" />
+      <ProjectReference Include="..\Onion.Domain.Models\Onion.Domain.Models.csproj" />
+      <ProjectReference Include="..\Onion.Domain.Services\Onion.Domain.Services.csproj" />
+      <ProjectReference Include="..\Onion.Persistence.Postgres\Onion.Persistence.Postgres.csproj" />
+    </ItemGroup>
+
+</Project>

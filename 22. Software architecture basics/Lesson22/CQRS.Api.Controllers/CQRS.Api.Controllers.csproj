@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.3.0" />
+      <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CQRS.Features.Accounts\CQRS.Features.Accounts.csproj" />
+      <ProjectReference Include="..\CQRS.Features.Clients\CQRS.Features.Clients.csproj" />
+      <ProjectReference Include="..\CQRS.Features.Tariffs\CQRS.Features.Tariffs.csproj" />
+      <ProjectReference Include="..\CQRS.Features.Tickets\CQRS.Features.Tickets.csproj" />
+    </ItemGroup>
+
+</Project>
