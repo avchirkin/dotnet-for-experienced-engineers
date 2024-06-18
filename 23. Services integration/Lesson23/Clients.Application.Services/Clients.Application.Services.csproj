@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Clients.Application.Models\Clients.Application.Models.csproj" />
+      <ProjectReference Include="..\Clients.Application.Services.Abstractions\Clients.Application.Services.Abstractions.csproj" />
+      <ProjectReference Include="..\Clients.Domain.Models\Clients.Domain.Models.csproj" />
+      <ProjectReference Include="..\Clients.Persistence.Postgres\Clients.Persistence.Postgres.csproj" />
+    </ItemGroup>
+
+</Project>

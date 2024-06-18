@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Tickets.Application.Models\Tickets.Application.Models.csproj" />
+      <ProjectReference Include="..\Tickets.Application.Services.Abstractions\Tickets.Application.Services.Abstractions.csproj" />
+      <ProjectReference Include="..\Tickets.Domain.Models\Tickets.Domain.Models.csproj" />
+      <ProjectReference Include="..\Tickets.Integrations.Accounts\Tickets.Integrations.Accounts.csproj" />
+      <ProjectReference Include="..\Tickets.Integrations.Clients\Tickets.Integrations.Clients.csproj" />
+      <ProjectReference Include="..\Tickets.Integrations.Tariffs\Tickets.Integrations.Tariffs.csproj" />
+      <ProjectReference Include="..\Tickets.Persistence.Postgres\Tickets.Persistence.Postgres.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    </ItemGroup>
+
+</Project>

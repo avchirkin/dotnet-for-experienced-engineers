@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Tariffs.Application.Models\Tariffs.Application.Models.csproj" />
+      <ProjectReference Include="..\Tariffs.Application.Services.Abstractions\Tariffs.Application.Services.Abstractions.csproj" />
+      <ProjectReference Include="..\Tariffs.Persistence.Postgres\Tariffs.Persistence.Postgres.csproj" />
+    </ItemGroup>
+
+</Project>
