@@ -12,11 +12,11 @@ namespace TravelCardProject.Models
         [JsonPropertyName("trip_date")]
         public DateTime TripDate { get; init; }
 
-        [JsonPropertyName("terminal_id")]
-        public TerminalInfoDto? TerminalInfo { get; init; }
+        [JsonPropertyName("terminal_name")]
+        public string TerminalName { get; init; }
 
-        [JsonPropertyName("travel_card_id")]
-        public TravelCardInfoDto TravelCardInfo { get; init; }
+        [JsonPropertyName("travel_card_number")]
+        public string TravelCardNumber {  get; init; }
 
         public static TripInfoDto FromEntity(Trip tripEntity)
         {
@@ -24,8 +24,8 @@ namespace TravelCardProject.Models
             {
                 Id = tripEntity.Id,
                 TripDate = tripEntity.TripDate,
-                TerminalInfo = TerminalInfoDto.FromEntity(tripEntity.Terminal),
-                TravelCardInfo = TravelCardInfoDto.FromEntity(tripEntity.TravelCard),
+                TerminalName = TerminalInfoDto.FromEntity(tripEntity.Terminal).Name,
+                TravelCardNumber = TravelCardInfoDto.FromEntity(tripEntity.TravelCard).Number,
             };
         }
     }

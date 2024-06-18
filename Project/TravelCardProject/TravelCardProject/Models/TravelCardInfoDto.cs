@@ -21,13 +21,13 @@ namespace TravelCardProject.Models
         [JsonPropertyName("status")]
         public TravelCardStatus Status { get; init; }
 
-        [JsonPropertyName("account_id")]
+        [JsonPropertyName("account_info")]
         public AccountInfoDto? AccountInfo { get; init; }
 
-        [JsonPropertyName("tariff_id")]
+        [JsonPropertyName("tariff_info")]
         public TariffInfoDto TariffInfo { get; init; }
 
-        [JsonPropertyName("passenger_id")]
+        [JsonPropertyName("passenger_info")]
         public PassengerInfoDto PassengerInfo { get; init; }
 
         public static TravelCardInfoDto FromEntity(TravelCard travelCardEntity)
