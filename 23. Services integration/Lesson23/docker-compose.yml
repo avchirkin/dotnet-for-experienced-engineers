@@ -1,0 +1,40 @@
+﻿services:
+  accounts.host:
+    image: accounts.host
+    build:
+      context: .
+      dockerfile: Accounts.Host/Dockerfile
+    ports:
+      - "8082:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      
+  clients.host:
+    image: clients.host
+    build:
+      context: .
+      dockerfile: Clients.Host/Dockerfile
+    ports:
+      - "8083:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      
+  tariffs.host:
+    image: tariffs.host
+    build:
+      context: .
+      dockerfile: Tariffs.Host/Dockerfile
+    ports:
+      - "8084:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      
+  tickets.host:
+    image: tickets.host
+    build:
+      context: .
+      dockerfile: Tickets.Host/Dockerfile
+    ports:
+      - "8085:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
