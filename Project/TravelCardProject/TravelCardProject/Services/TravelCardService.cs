@@ -78,11 +78,23 @@ namespace TravelCardProject.Services
             var travelCard = await context.TravelCards.FirstOrDefaultAsync(c => c.Id.Equals(travelCardId));
             if (travelCard == null) throw new InvalidOperationException("TravelCard doesn't exist");
 
+            // Нужно ли где-то хранить срок возможной смены тарифа?
             if (travelCard.TariffUpdateDate != null && ((DateTime)travelCard.TariffUpdateDate).AddDays(1) <= DateTime.Now)
             {
                 var tariff = await context.Tariffs.FirstOrDefaultAsync(c => c.Id.Equals(tariffId));
                 if (tariff == null) throw new InvalidOperationException("Tariff doesn't exist");
 
+                if (tariff.ActivationPrice != null)
+                {
+                    var account = await context.Accounts.FirstOrDefaultAsync(c => c.Id.Equals(travelCard.AccountId));
+                    if (account.Balance < tariff.ActivationPrice)
+                    {
+                        throw new InvalidOperationException("Insufficient funds in the account");
+                    }
+                    account.Balance -= (decimal)tariff.ActivationPrice;
+                }
+
+                // Учитывая, что тариф активируется в 00 00, возможно, стоит добавить еще поле в модель для отслеживания...
                 travelCard.TariffId = tariff.Id;
                 travelCard.TariffUpdateDate = DateTime.Now;
                 await context.SaveChangesAsync();
