@@ -1,9 +1,12 @@
-﻿using TravelCardProject.Models;
+﻿using TravelCardProject.Entities;
+using TravelCardProject.Models;
 
 namespace TravelCardProject.Services
 {
     public interface IAccountService
     {
-        Task<AccountInfoDto> CreateAccount(NewAccountDto accountCreationInfo);
+        Task<Account> CreateAccount();
+
+        Task<AccountInfoDto?> GetAccountInfo(Guid id);
     }
 }

@@ -11,9 +11,12 @@ namespace TravelCardProject.Models
         public int? Duration { get; init; }
 
         [JsonPropertyName("underground_trip_price")]
-        public decimal UndergroundTripPrice { get; init; }
+        public decimal? UndergroundTripPrice { get; init; }
 
         [JsonPropertyName("ground_trip_price")]
-        public decimal GroundTripPrice { get; init; }
+        public decimal? GroundTripPrice { get; init; }
+
+        [JsonPropertyName("activation_price")]
+        public decimal? ActivationPrice { get; init; }
     }
 }

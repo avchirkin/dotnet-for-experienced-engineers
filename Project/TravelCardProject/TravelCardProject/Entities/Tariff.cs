@@ -8,9 +8,11 @@
         // Заложенная в тарифе длительность
         public int? Duration { get; init; }
         // Стоимость поездки под землей
-        public decimal UndergroundTripPrice { get; init; }
+        public decimal? UndergroundTripPrice { get; init; }
         // Стоимость поездки под землей
-        public decimal GroundTripPrice { get; init; }
+        public decimal? GroundTripPrice { get; init; }
+        // Стоимость активации тарифа
+        public decimal? ActivationPrice { get; init; }
 
         public IEnumerable<TravelCard> TravelCards { get; init; } = default!;
     }
