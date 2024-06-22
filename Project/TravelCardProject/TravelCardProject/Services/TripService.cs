@@ -6,6 +6,7 @@ namespace TravelCardProject.Services
 {
     public sealed class TripService(TravelCardsDbContext context) : ITripService
     {
+
         public async Task<TripInfoDto> CreateTrip(NewTripDto tripCreationInfo)
         {
             // Скорее всего, надо написать свои эксепшены
@@ -30,8 +31,15 @@ namespace TravelCardProject.Services
             var entry = await context.AddAsync(trip);
             await context.SaveChangesAsync();
 
-            // Тут туго возвращается Информация о trip из-за проблем с выводом связей Travel Card
             return TripInfoDto.FromEntity(entry.Entity);
+        }
+
+        public async Task<TripInfoDto?> GetTripInfo(Guid id)
+        {
+            var trip = await context.Trips
+                .AsNoTracking()
+                .FirstOrDefaultAsync(t => t.Id.Equals(id));
+            return trip == null ? null : TripInfoDto.FromEntity(trip);
         }
     }
 }

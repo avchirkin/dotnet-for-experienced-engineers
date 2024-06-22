@@ -1,4 +1,5 @@
-﻿using TravelCardProject.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using TravelCardProject.Entities;
 using TravelCardProject.Models;
 
 namespace TravelCardProject.Services
@@ -17,6 +18,14 @@ namespace TravelCardProject.Services
             await context.SaveChangesAsync();
 
             return PassengerInfoDto.FromEntity(entry.Entity);
+        }
+
+        public async Task<PassengerInfoDto?> GetPassengerInfo(Guid id)
+        {
+            var passenger = await context.Passengers
+                .AsNoTracking()
+                .FirstOrDefaultAsync(t => t.Id.Equals(id));
+            return passenger == null ? null : PassengerInfoDto.FromEntity(passenger);
         }
     }
 }

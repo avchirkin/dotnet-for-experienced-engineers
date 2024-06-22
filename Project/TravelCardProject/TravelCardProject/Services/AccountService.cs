@@ -1,11 +1,12 @@
-﻿using TravelCardProject.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using TravelCardProject.Entities;
 using TravelCardProject.Models;
 
 namespace TravelCardProject.Services
 {
     public sealed class AccountService(TravelCardsDbContext context) : IAccountService
     {
-        public async Task<AccountInfoDto> CreateAccount(NewAccountDto accountCreationInfo)
+        public async Task<Account> CreateAccount()
         {
             var account = new Account
             {
@@ -13,10 +14,18 @@ namespace TravelCardProject.Services
                 Balance = 0,
             };
 
-            var entry = await context.AddAsync(account);
+            await context.AddAsync(account);
             await context.SaveChangesAsync();
 
-            return AccountInfoDto.FromEntity(entry.Entity);
+            return account;
+        }
+
+        public async Task<AccountInfoDto?> GetAccountInfo(Guid id)
+        {
+            var account = await context.Accounts
+                .AsNoTracking()
+                .FirstOrDefaultAsync(t => t.Id.Equals(id));
+            return account == null ? null : AccountInfoDto.FromEntity(account);
         }
     }
 }

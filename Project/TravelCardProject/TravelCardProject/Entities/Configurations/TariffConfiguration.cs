@@ -30,6 +30,10 @@ namespace TravelCardProject.Entities.Configurations
                 .HasColumnName("ground_trip_price")
                 .HasColumnType("decimal");
 
+            builder.Property(item => item.ActivationPrice)
+                .HasColumnName("activation_price")
+                .HasColumnType("decimal");
+
             builder.Property(item => item.Duration)
                 .HasColumnName("duration")
                 .HasColumnType("int");

@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 using TravelCardProject.Entities;
 using TravelCardProject.Models;
 
@@ -15,12 +16,21 @@ namespace TravelCardProject.Services
                 Duration = tariffCreationInfo.Duration,
                 UndergroundTripPrice = tariffCreationInfo.UndergroundTripPrice,
                 GroundTripPrice = tariffCreationInfo.GroundTripPrice,
+                ActivationPrice = tariffCreationInfo.ActivationPrice,
             };
 
             var entry = await context.AddAsync(tariff);
             await context.SaveChangesAsync();
 
             return TariffInfoDto.FromEntity(entry.Entity);
+        }
+
+        public async Task<TariffInfoDto?> GetTariffInfo(Guid id)
+        {
+            var tariff = await context.Tariffs
+                .AsNoTracking()
+                .FirstOrDefaultAsync(t => t.Id.Equals(id));
+            return tariff == null ? null : TariffInfoDto.FromEntity(tariff);
         }
     }
 }
