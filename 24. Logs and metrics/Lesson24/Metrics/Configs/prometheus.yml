@@ -22,5 +22,5 @@ scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
   - job_name: "MetricsApp"
     static_configs:
-      - targets: ["host.docker.internal:5140"]
+      - targets: ["host.docker.internal:8082"]
         

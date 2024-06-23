@@ -5,16 +5,13 @@ namespace Metrics.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public sealed class ProductsController(ILogger<ProductsController> logger, IProductsService productsService)
+public sealed class ProductsController(IProductsService productsService)
     : ControllerBase
 {
-    private readonly IProductsService _productsService = productsService;
-    
     [HttpGet("{id:int}")]
     public IActionResult GetById(int id)
     {
-        logger.LogInformation($"Controller - GetById {id}");
-        var product = _productsService.GetById(id);
+        var product = productsService.GetById(id);
         return Ok(product);
     }
 }
