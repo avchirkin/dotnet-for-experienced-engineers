@@ -1,0 +1,37 @@
+﻿services:
+  logging:
+    image: logging-sample-app
+    build:
+      context: .
+      dockerfile: Logging/Dockerfile
+    ports:
+      - 8081:8080
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+  metrics:
+    image: metrics-sample-app
+    build:
+      context: .
+      dockerfile: Metrics/Dockerfile
+    ports:
+      - 8082:8080
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+  seq:
+    image: datalust/seq:latest
+    ports:
+      - 5341:5341
+      - 80:80
+    environment:
+      ACCEPT_EULA: 'Y'
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - 9090:9090
+    volumes:
+      - ./Metrics/Configs:/etc/prometheus
+    command: --config.file=/etc/prometheus/prometheus.yml
+  grafana:
+    image: grafana/grafana-enterprise:latest
+    ports:
+      - 3000:3000
