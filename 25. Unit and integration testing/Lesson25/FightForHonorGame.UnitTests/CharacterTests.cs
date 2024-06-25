@@ -16,7 +16,7 @@ public class CharacterTests
         // Act
         // .. nothing here now
 
-        //Assert
+        // Assert
         Assert.That(character.Name, Is.EqualTo("Black Sword"));
         Assert.That(character.Health, Is.EqualTo(150));
         Assert.That(character.IsAlive, Is.True);

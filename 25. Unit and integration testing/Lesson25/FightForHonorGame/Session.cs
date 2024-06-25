@@ -77,16 +77,18 @@ public static class Session
             Console.WriteLine($"1 - {BodyPartType.Head}");
             Console.WriteLine($"2 - {BodyPartType.LeftHand}");
             Console.WriteLine($"3 - {BodyPartType.RightHand}");
-            Console.WriteLine($"4 - {BodyPartType.LeftLeg}");
-            Console.WriteLine($"5 - {BodyPartType.RightLeg}");
+            Console.WriteLine($"4 - {BodyPartType.Torso}");
+            Console.WriteLine($"5 - {BodyPartType.LeftLeg}");
+            Console.WriteLine($"6 - {BodyPartType.RightLeg}");
 
             var bodyPartType = Console.ReadLine() switch
             {
                 "1" => BodyPartType.Head,
                 "2" => BodyPartType.LeftHand,
                 "3" => BodyPartType.RightHand,
-                "4" => BodyPartType.LeftLeg,
-                "5" => BodyPartType.RightLeg,
+                "4" => BodyPartType.Torso,
+                "5" => BodyPartType.LeftLeg,
+                "6" => BodyPartType.RightLeg,
                 _ => throw new InvalidOperationException("Unknown target")
             };
 
